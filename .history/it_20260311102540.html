@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influencer Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+    /* CSS কোড এখানে শুরু */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+        /* বা অন্য কোনো ফন্ট ব্যবহার করতে পারেন */
+    }
+
+    body {
+        background-color: #f9f9f9;
+        padding: 40px 10%;
+        /* ডানে-বামে একটু গ্যাপ */
+    }
+
+    /* এটি মেইন গ্রিড কন্টেইনার */
+    .product-grid {
+        display: grid;
+
+        /* ডিফল্টভাবে ডেক্সটপের জন্য: পাশাপাশি ৩টি কার্ড */
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 30px;
+        /* কার্ডগুলোর মাঝখানের গ্যাপ */
+    }
+
+    /* প্রোডাক্ট কার্ডের স্টাইল */
+    .product-card {
+        background: #fff;
+        padding: 15px;
+        border-radius: 12px;
+        text-align: left;
+        /* হালকা শ্যাডো (Shadow) */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: 0.3s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        /* মাউস নিলে একটু উপরে উঠবে */
+    }
+
+    /* কার্ডের ছবির স্টাইল */
+    .thumbnail {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* কার্ডের কন্টেন্ট স্টাইল */
+    .card-content h3 {
+        font-size: 22px;
+        color: #3A3A3A;
+        margin-bottom: 5px;
+    }
+
+    .price {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    /* রেটিং স্টারের স্টাইল */
+    .rating {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    .rating i {
+        color: #FF9800;
+        /* স্টারের কালার */
+        font-size: 14px;
+    }
+
+    .rating-number {
+        color: #787885;
+        font-size: 14px;
+    }
+
+    /* বর্ণনা লেখার স্টাইল */
+    .desc {
+        color: #787885;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* === মোবাইলের জন্য রেসপনসিভ কোড (Media Query) === */
+    @media (max-width: 768px) {
+        .product-grid {
+            /* মোবাইলে গ্রিড ভাঙবে এবং ১টি করে কার্ড দেখাবে */
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+</style>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Influencer products</a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#">Log In</a></li>
+            <div class="nav-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="cart-icon"><i class="fa-solid fa-cart-shopping"></i><span class="cart-dot"></span></div>
+            </div>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Start your Journey as Influencer</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem vestibulum sed scelerisque eros. Lectus
+                faucibus.</p>
+            <a href="#" class="btn-pink">Preebook now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-image-container">
+            <img src="images/Circle design.svg" alt="Circle Background" class="circle-image">
+
+            <img src="images/main-camera.png" alt="Fujifilm Camera" class="camera-image">
+        </div>
+        </div>
+        </div>
+    </header>
+
+    <section class="brand-section">
+        <div class="logos-container">
+            <img src="logos/Alibaba.svg" alt="Brands">
+            <img src="logos/amazon.svg" alt="Brands">
+            <img src="logos/Daraz.pk Logo.svg" alt="Brands">
+            <img src="logos/ebay.svg" alt="Brands">
+            <img src="logos/Rakuten.svg" alt="Brands">
+            <img src="logos/Target.svg" alt="Brands">
+            <img src="logos/Walmart.svg" alt="Brands">
+        </div>
+    </section>
+
+    <section class="collection-section">
+        <h2 class="title">Popular Collection</h2>
+           <div class="product-container">
+  <div class="product-card">
+    <img src="images/tripod.png" alt="Tripod">
+    <h3>Flex Tripod</h3>
+    <p>$50.48</p>
+  </div>
+  
+  <div class="product-card">
+    <img src="images/mic.png" alt="Microphone">
+    <h3>Microphone</h3>
+    <p>$120.25</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/airpod.png" alt="a">
+    <h3>Microphone</h3>
+    <p>$120.25</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/mic.png" alt="Microphone">
+    <h3>Microphone</h3>
+    <p>$120.25</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/mic.png" alt="Microphone">
+    <h3>Microphone</h3>
+    <p>$120.25</p>
+  </div>
+
+<div class="product-card">
+    <img src="images/mic.png" alt="Microphone">
+    <h3>Microphone</h3>
+    <p>$120.25</p>
+  </div>
+
+<div class="product-card">
+    <img src="images/mic.png" alt="Microphone">
+    <h3>Microphone</h3>
+    <p>$120.25</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/mic.png" alt="Microphone">
+    <h3>Microphone</h3>
+    <p>$120.25</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/mic.png" alt="Microphone">
+    <h3>Microphone</h3>
+    <p>$120.25</p>
+  </div>
+
+  </div>                     
+    </section>
+    </section>
+
+    <footer>
+        <h3>Influencer products</h3>
+        <p>Copyright © 2020 influencer products <br> All rights reserved</p>
+        <div class="socials">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-dribbble"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </footer>
+
+</body>
+
+</html>

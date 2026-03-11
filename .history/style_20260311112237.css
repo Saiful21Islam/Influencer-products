@@ -1,0 +1,362 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 10%;
+    background-color: #fff;
+    min-height: 80vh;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #3A3A3A;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #6C6C6C;
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+.btn-pink {
+    background-color: #E02C6D;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.hero-image-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.camera-image {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 2;
+}
+
+.circle-image {
+    position: absolute;
+    width: 110%;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 5%;
+    }
+
+    .hero-content {
+        margin-top: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-image-container {
+        width: 100%;
+    }
+
+    .camera-image {
+        max-width: 300px; /* মোবাইলে ক্যামেরা একটু ছোট */
+    }
+}
+
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    align-items: center;
+}
+.logo { font-size: 24px; font-weight: bold; color: #3A3A3A; text-decoration: none; }
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 25px; }
+.nav-links a { text-decoration: none; color: #3A3A3A; font-weight: 500; }
+.nav-icons { display: flex; margin-left: 20px; gap: 20px; font-size: 18px; }
+
+/* Hero */
+.hero {
+    display: flex;
+    padding: 50px 10%;
+    align-items: center;
+}
+.hero-content h1 { font-size: 52px; color: #3A3A3A; margin-bottom: 15px; }
+.btn-pink {
+    background: #E02C6D;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+.hero-image img { width: 400px; }
+
+/* Brands */
+.brand-section {
+    padding: 40px 10%; /* ডানে-বামে গ্যাপ রাখার জন্য */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 50px 0;
+}
+
+.logos-container {
+    display: flex;
+    /* নিচের লাইনটিই সবচেয়ে গুরুত্বপূর্ণ */
+    justify-content: space-between; /* এটি লোগোগুলোকে সমান দূরত্বে ছড়িয়ে দেবে */
+    align-items: center;
+    flex-wrap: wrap; /* লোগো বেশি হলে নিচে চলে আসবে, ভেঙে যাবে না */
+}
+
+.logos-container img {
+    height: 35px; /* লোগোর উচ্চতা আপনার প্রয়োজন অনুযায়ী সেট করুন */
+    width: auto;
+    /* যদি লোগোগুলো খুব বড় মনে হয় তবে এখানে 'max-width' দিতে পারেন */
+}
+
+.hero-image-container {
+    position: relative; /* এটি খুবই জরুরি যাতে ছবিগুলো এর ভেতরেই থাকে */
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ব্যাকগ্রাউন্ড বৃত্তের স্টাইল */
+.circle-image {
+    position: absolute; /* এটিকে সবার নিচে ফিক্সড করার জন্য */
+    width: 450px; /* বৃত্তের সাইজ অনুযায়ী কমিয়ে বাড়িয়ে নিতে পারেন */
+    height: auto;
+    z-index: 1; /* কম ভ্যালু মানে এটি পেছনে থাকবে */
+    opacity: 0.8; /* আপনি চাইলে এটাকে আরও হালকা করতে পারেন */
+}
+
+/* ক্যামেরার স্টাইল */
+.camera-image {
+    position: relative; /* এটি বৃত্তের উপরে থাকবে */
+    width: 100%; /* ক্যামেরার সাইজ */
+    max-width: 480px;
+    z-index: 2; /* বেশি ভ্যালু মানে এটি বৃত্তের উপরে থাকবে */
+    
+    /* ছবিটিকে একটু জীবন্ত করার জন্য হালকা ড্রপ শ্যাডো */
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+/* কন্টেইনার সেটআপ - Flexbox ব্যবহার করা হয়েছে */
+.product-container {
+  display: flex;
+  flex-wrap: wrap; /* জায়গা ছোট হলে কার্ড অটো নিচে নামবে */
+  gap: 20px; 
+  justify-content: center; 
+  padding: 20px;
+}
+
+/* প্রতিটি কার্ডের ডিজাইন */
+.product-card {
+  /* ৩১০ পিক্সেল পর্যন্ত ছোট হবে, তারপর নিচে নামবে */
+  flex: 1 1 310px; 
+  max-width: 350px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* মাউস নিলে একটু উপরে ভাসবে */
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* --- রেসপনসিভ পার্ট --- */
+
+/* ট্যাবলেট এবং ছোট ল্যাপটপের জন্য */
+@media (max-width: 768px) {
+  .product-container {
+    gap: 15px;
+    padding: 10px;
+  }
+}
+
+/* মোবাইল ফোনের জন্য (একদম নিখুঁত দেখাবে) */
+@media (max-width: 480px) {
+  .product-card {
+    flex: 1 1 100%; /* মোবাইলে কার্ডটি পুরো স্ক্রিন জুড়ে থাকবে */
+    max-width: 100%; /* যাতে ডানে-বামে ফাকা না থাকে */
+    margin: 0 auto;
+  }
+}
+/* স্টার রেটিংয়ের ডিজাইন */
+.stars {
+    display: flex;
+    align-items: center;
+    color: #FF9900;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* ৪.৯৯ রেটিংয়ের জন্য শেষ স্টারটি অর্ধেক দেখানোর ট্রিক */
+.star-half {
+    position: relative;
+    display: inline-block;
+    color: #ccc; /* পেছনের স্টারের রঙ (ধূসর) */
+}
+
+.star-half::after {
+    content: '★'; /* সামনের অর্ধেক স্টারের রঙ (গোল্ডেন) */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%; /* ঠিক অর্ধেক দেখাবে */
+    overflow: hidden;
+    color: #FF9900;
+}
+
+.rating-num {
+    color: #444;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+/* নিচের ছোট ছোট লেখাগুলোর ডিজাইন */
+.details {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin: 0; /* গ্যাপ একদম জিরো করে দিলাম ইমেজের মতো */
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.details:last-child {
+    font-weight: 700;
+    color: #666;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.featured-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.featured-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* লম্বালম্বিভাবে মাঝখানে রাখবে */
+    gap: 50px; /* ছবি ও লেখার মাঝের গ্যাপ */
+}
+
+/* ছবির অংশ */
+.featured-image {
+    flex: 1;
+}
+
+.featured-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* লেখার অংশ */
+.featured-content {
+    flex: 1;
+}
+
+.featured-content h2 {
+    font-size: 38px;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.featured-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* জয়েন বাটন */
+.join-btn {
+    display: inline-block;
+    background-color: #E02C6D; /* আপনার ইমেজের পিঙ্ক কালার */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.join-btn:hover {
+    background-color: #c2255c;
+}
+
+/* --- মোবাইল ভিউর জন্য কোড --- */
+@media (max-width: 768px) {
+    .featured-container {
+        flex-direction: column; /* মোবাইলে একটার নিচে একটা আসবে */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .featured-content h2 {
+        font-size: 28px;
+    }
+}
+
+/* Footer */
+footer {
+    background: #0A0826;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+}
+footer h3 { margin-bottom: 10px; }
+footer p { font-size: 14px; opacity: 0.8; }
+.socials { margin-top: 20px; font-size: 20px; gap: 15px; display: flex; justify-content: center; }

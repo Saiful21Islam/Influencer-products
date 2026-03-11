@@ -272,77 +272,199 @@
 
             <div class="featured-content">
                 <h2>Featured products at one place</h2>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor <br> do amet sint. Velit officia
-                    consequat
-                    duis enim velit mollit.<br> Exercitation veniam consequat sunt nostrud amet.</p>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                    duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                 <a href="#" class="join-btn">Join Now &rarr;</a>
             </div>
         </div>
     </section>
-    <footer class="influencer-footer">
-        <h3>Influencer products</h3>
-        <p>Copyright © 2026 Saiful Islam <br> All rights reserved</p>
 
-        <div class="footer-social-icons">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
         </div>
-    </footer>
-    <style>
-        .influencer-footer {
-            background-color: #0A0826 !important;
-            color: white !important;
+
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section newsletter">
+            <h3>Subscribe to our Newsletter</h3>
+            <form action="#">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>Copyright © 2026 influencer products. All rights reserved</p>
+    </div>
+</footer>
+
+<style>
+    /* বডি মার্জিন জিরো করা যাতে ফুটার দুই পাশে মিশে থাকে */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* মূল ফুটার ব্যাকগ্রাউন্ড - ছবির মতো ফুল উইডথ */
+    .main-footer {
+        background-color: #0A0826 !important; /* ছবির গাঢ় নীল কালার */
+        color: #ffffff;
+        padding: 80px 0 40px 0; /* ওপরে নিচে পর্যাপ্ত প্যাডিং */
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 200px;
+        margin-bottom: 30px;
+    }
+
+    .footer-section h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 12px;
+    }
+
+    .footer-section ul li a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: 0.3s;
+        font-size: 15px;
+    }
+
+    .footer-section ul li a:hover {
+        color: #ffffff;
+        padding-left: 5px;
+    }
+
+    /* সোশ্যাল আইকন (ছবির মতো গোল ডিজাইন) */
+    .social-icons {
+        display: flex;
+        gap: 12px;
+    }
+
+    .social-icons a {
+        background: rgba(255, 255, 255, 0.1); /* হালকা ডার্ক সার্কেল */
+        color: white;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: 0.3s ease;
+        font-size: 16px;
+    }
+
+    .social-icons a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+
+    /* নিউজলেটার ফরম */
+    .newsletter input {
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        width: 60%;
+        outline: none;
+    }
+
+    .newsletter button {
+        padding: 12px 20px;
+        background-color: #E91E63; /* ছবির মতো উজ্জ্বল কালার */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 5px;
+        font-weight: bold;
+    }
+
+    /* কপিরাইট নিচের অংশ */
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 40px;
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+        opacity: 0.6;
+        margin: 0;
+    }
+
+    /* রেসপন্সিভ (মোবাইলের জন্য) */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
             text-align: center;
-            padding: 80px 0;
-            width: 100vw;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-            box-sizing: border-box;
         }
-
-        .influencer-footer h3 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .influencer-footer p {
-            font-size: 14px;
-            opacity: 0.8;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .footer-social-icons {
-            display: flex;
+        .social-icons {
             justify-content: center;
-            gap: 15px;
         }
-
-        .footer-social-icons a {
-            color: white;
-            background: rgba(255, 255, 255, 0.1);
-            width: 42px;
-            height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s ease;
+        .newsletter input {
+            width: 100%;
+            margin-bottom: 10px;
         }
-
-        .footer-social-icons a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
+        .newsletter button {
+            width: 100%;
+            margin-left: 0;
         }
-    </style>
+    }
+</style>
 </body>
 
 </html>

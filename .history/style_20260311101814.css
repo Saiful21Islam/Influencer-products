@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    align-items: center;
+}
+.logo { font-size: 24px; font-weight: bold; color: #3A3A3A; text-decoration: none; }
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 25px; }
+.nav-links a { text-decoration: none; color: #3A3A3A; font-weight: 500; }
+.nav-icons { display: flex; margin-left: 20px; gap: 20px; font-size: 18px; }
+
+/* Hero */
+.hero {
+    display: flex;
+    padding: 50px 10%;
+    align-items: center;
+}
+.hero-content h1 { font-size: 52px; color: #3A3A3A; margin-bottom: 15px; }
+.btn-pink {
+    background: #E02C6D;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+.hero-image img { width: 400px; }
+
+/* Brands */
+.brand-section {
+    padding: 40px 10%; /* ডানে-বামে গ্যাপ রাখার জন্য */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 50px 0;
+}
+
+.logos-container {
+    display: flex;
+    /* নিচের লাইনটিই সবচেয়ে গুরুত্বপূর্ণ */
+    justify-content: space-between; /* এটি লোগোগুলোকে সমান দূরত্বে ছড়িয়ে দেবে */
+    align-items: center;
+    flex-wrap: wrap; /* লোগো বেশি হলে নিচে চলে আসবে, ভেঙে যাবে না */
+}
+
+.logos-container img {
+    height: 35px; /* লোগোর উচ্চতা আপনার প্রয়োজন অনুযায়ী সেট করুন */
+    width: auto;
+    /* যদি লোগোগুলো খুব বড় মনে হয় তবে এখানে 'max-width' দিতে পারেন */
+}
+
+.hero-image-container {
+    position: relative; /* এটি খুবই জরুরি যাতে ছবিগুলো এর ভেতরেই থাকে */
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ব্যাকগ্রাউন্ড বৃত্তের স্টাইল */
+.circle-image {
+    position: absolute; /* এটিকে সবার নিচে ফিক্সড করার জন্য */
+    width: 450px; /* বৃত্তের সাইজ অনুযায়ী কমিয়ে বাড়িয়ে নিতে পারেন */
+    height: auto;
+    z-index: 1; /* কম ভ্যালু মানে এটি পেছনে থাকবে */
+    opacity: 0.8; /* আপনি চাইলে এটাকে আরও হালকা করতে পারেন */
+}
+
+/* ক্যামেরার স্টাইল */
+.camera-image {
+    position: relative; /* এটি বৃত্তের উপরে থাকবে */
+    width: 100%; /* ক্যামেরার সাইজ */
+    max-width: 480px;
+    z-index: 2; /* বেশি ভ্যালু মানে এটি বৃত্তের উপরে থাকবে */
+    
+    /* ছবিটিকে একটু জীবন্ত করার জন্য হালকা ড্রপ শ্যাডো */
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+
+
+.product-card:hover {
+    transform: translateY(-5px); /* মাউস নিলে কার্ডটি একটু উপরে উঠবে */
+}
+
+.thumbnail img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card-content h3 { margin: 15px 0 5px; }
+.price { font-size: 20px; font-weight: 500; }
+.rating { color: #FF9800; font-size: 14px; margin: 10px 0; }
+.desc { color: #787885; font-size: 14px; line-height: 1.5; }
+
+/* মোবাইল ফোনের জন্য রেসপনসিভ (যাতে ভেঙে না যায়) */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr); /* মোবাইলে ১টি করে দেখাবে */
+    }
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+    background: #0A0826;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+}
+footer h3 { margin-bottom: 10px; }
+footer p { font-size: 14px; opacity: 0.8; }
+.socials { margin-top: 20px; font-size: 20px; gap: 15px; display: flex; justify-content: center; }

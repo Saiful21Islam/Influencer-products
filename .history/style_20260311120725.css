@@ -1,0 +1,437 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 10%;
+    background-color: #fff;
+    min-height: 80vh;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #3A3A3A;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #6C6C6C;
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+.btn-pink {
+    background-color: #E02C6D;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.hero-image-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.camera-image {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 2;
+}
+
+.circle-image {
+    position: absolute;
+    width: 110%;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 5%;
+    }
+    .hero-content {
+        margin-top: 30px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-image-container {
+        width: 100%;
+    }
+    .camera-image {
+        max-width: 300px;
+    }
+}
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    align-items: center;
+}
+.logo { font-size: 24px; font-weight: bold; color: #3A3A3A; text-decoration: none; }
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li { margin-left: 25px; }
+.nav-links a { text-decoration: none; color: #3A3A3A; font-weight: 500; }
+.nav-icons { display: flex; margin-left: 20px; gap: 20px; font-size: 18px; }
+
+/* Hero */
+.hero {
+    display: flex;
+    padding: 50px 10%;
+    align-items: center;
+}
+.hero-content h1 { font-size: 52px; color: #3A3A3A; margin-bottom: 15px; }
+.btn-pink {
+    background: #E02C6D;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+.hero-image img { width: 400px; }
+
+/* Brands */
+.brand-section {
+    padding: 40px 10%;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 50px 0;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logos-container img {
+    height: 35px;
+    width: auto;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-image {
+    position: absolute;
+    width: 450px;
+    height: auto;
+    z-index: 1; 
+    opacity: 0.8;
+}
+.camera-image {
+    position: relative;
+    width: 100%; 
+    max-width: 480px;
+    z-index: 2; 
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center; 
+  padding: 20px;
+}
+
+.product-card {
+  flex: 1 1 310px; 
+  max-width: 350px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    gap: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    flex: 1 1 100%;  
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    color: #FF9900;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.star-half {
+    position: relative;
+    display: inline-block;
+    color: #ccc;
+}
+
+.star-half::after {
+    content: '★';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #FF9900;
+}
+
+.rating-num {
+    color: #444;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.details {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.details:last-child {
+    font-weight: 700;
+    color: #666;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.featured-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.featured-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; 
+    gap: 50px;
+
+.featured-image {
+    flex: 1;
+}
+
+.featured-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.featured-content {
+    flex: 1;
+}
+
+.featured-content h2 {
+    font-size: 38px;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.featured-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.join-btn {
+    display: inline-block;
+    background-color: #E02C6D;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.join-btn:hover {
+    background-color: #c2255c;
+}
+
+@media (max-width: 768px) {
+    .featured-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .featured-content h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* ১. ফুটারের মূল ব্যাকগ্রাউন্ড - যা পুরো স্ক্রিন জুড়ে থাকবে */
+footer {
+    background-color: #0A0826 !important; /* ছবির হুবহু ডার্ক ব্লু */
+    color: white;
+    padding: 80px 0; /* ওপরে নিচে গ্যাপ ছবির মতো */
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    display: block;
+    margin-top: 50px;
+}
+
+/* ২. ভেতরের কন্টেইনারকে সাজানো */
+.footer-container {
+    max-width: 1200px; /* কন্টেন্টগুলো মাঝখানে রাখার জন্য */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* ৩. প্রতিটি সেকশনের ডিজাইন */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+/* ৪. সোশ্যাল আইকন ডিজাইন (আপনার ছবির মতো গোল গোল) */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    background: rgba(255, 255, 255, 0.1); /* হালকা গোল শেড */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* ৫. নিউজলেটার ফরম ডিজাইন */
+.newsletter form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 60%;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #E91E63; /* ছবির মতো পিঙ্কিশ-রেড কালার */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* মোবাইল রেসপন্সিভ */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+    .newsletter form {
+        justify-content: center;
+    }
+}

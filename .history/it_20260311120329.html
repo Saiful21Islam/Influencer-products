@@ -272,77 +272,88 @@
 
             <div class="featured-content">
                 <h2>Featured products at one place</h2>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor <br> do amet sint. Velit officia
-                    consequat
-                    duis enim velit mollit.<br> Exercitation veniam consequat sunt nostrud amet.</p>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                    duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                 <a href="#" class="join-btn">Join Now &rarr;</a>
             </div>
         </div>
     </section>
-    <footer class="influencer-footer">
-        <h3>Influencer products</h3>
-        <p>Copyright © 2026 Saiful Islam <br> All rights reserved</p>
 
-        <div class="footer-social-icons">
+    <footer class="final-footer">
+    <div class="footer-content">
+        <h3>Influencer products</h3>
+        <p>Copyright © 2026 influencer products <br> All rights reserved</p>
+        
+        <div class="footer-socials">
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-dribbble"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
         </div>
-    </footer>
-    <style>
-        .influencer-footer {
-            background-color: #0A0826 !important;
-            color: white !important;
-            text-align: center;
-            padding: 80px 0;
-            width: 100vw;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-            box-sizing: border-box;
-        }
+    </div>
+</footer>
 
-        .influencer-footer h3 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
+<style>
+    /* ১. বডি থেকে ডিফল্ট মার্জিন সরিয়ে দেওয়া যাতে ফুটার দুই পাশে মিশে থাকে */
+    body {
+        margin: 0;
+        padding: 0;
+    }
 
-        .influencer-footer p {
-            font-size: 14px;
-            opacity: 0.8;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
+    /* ২. ফুটার স্টাইল - যা পুরো স্ক্রিন কভার করবে */
+    .final-footer {
+        background-color: #0A0826 !important; /* আপনার ছবির গাঢ় নীল কালার */
+        width: 100%;
+        padding: 80px 0; /* ওপরে নিচে গ্যাপ ছবির মতো */
+        text-align: center;
+        margin-top: 50px;
+        display: block;
+        clear: both;
+    }
 
-        .footer-social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
+    .footer-content h3 {
+        color: white;
+        font-family: sans-serif;
+        font-size: 26px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
 
-        .footer-social-icons a {
-            color: white;
-            background: rgba(255, 255, 255, 0.1);
-            width: 42px;
-            height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s ease;
-        }
+    .footer-content p {
+        color: rgba(255, 255, 255, 0.7); /* ছবির মতো হালকা সাদা */
+        font-family: sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
 
-        .footer-social-icons a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-    </style>
+    /* ৩. সোশ্যাল আইকন স্টাইল */
+    .footer-socials {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-socials a {
+        color: white;
+        background: rgba(255, 255, 255, 0.1); /* আইকনের পেছনের হালকা গোল শেড */
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+
+    .footer-socials a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+</style>
+
 </body>
 
 </html>

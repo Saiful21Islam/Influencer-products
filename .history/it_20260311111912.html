@@ -9,37 +9,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <style>
+    /* CSS কোড এখানে শুরু */
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: 'Inter', sans-serif;
+        /* বা অন্য কোনো ফন্ট ব্যবহার করতে পারেন */
     }
 
     body {
         background-color: #f9f9f9;
         padding: 40px 10%;
+        /* ডানে-বামে একটু গ্যাপ */
     }
 
+    /* এটি মেইন গ্রিড কন্টেইনার */
     .product-grid {
         display: grid;
+
+        /* ডিফল্টভাবে ডেক্সটপের জন্য: পাশাপাশি ৩টি কার্ড */
         grid-template-columns: repeat(3, 1fr);
+
         gap: 30px;
+        /* কার্ডগুলোর মাঝখানের গ্যাপ */
     }
 
+    /* প্রোডাক্ট কার্ডের স্টাইল */
     .product-card {
         background: #fff;
         padding: 15px;
         border-radius: 12px;
         text-align: left;
+        /* হালকা শ্যাডো (Shadow) */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         transition: 0.3s;
     }
 
     .product-card:hover {
         transform: translateY(-5px);
+        /* মাউস নিলে একটু উপরে উঠবে */
     }
 
+    /* কার্ডের ছবির স্টাইল */
     .thumbnail {
         width: 100%;
         height: auto;
@@ -54,6 +66,7 @@
         object-fit: cover;
     }
 
+    /* কার্ডের কন্টেন্ট স্টাইল */
     .card-content h3 {
         font-size: 22px;
         color: #3A3A3A;
@@ -66,6 +79,7 @@
         margin-bottom: 10px;
     }
 
+    /* রেটিং স্টারের স্টাইল */
     .rating {
         display: flex;
         align-items: center;
@@ -75,6 +89,7 @@
 
     .rating i {
         color: #FF9800;
+        /* স্টারের কালার */
         font-size: 14px;
     }
 
@@ -82,16 +97,17 @@
         color: #787885;
         font-size: 14px;
     }
-
+    
     .desc {
         color: #787885;
         font-size: 14px;
         line-height: 1.5;
     }
 
+    /* === মোবাইলের জন্য রেসপনসিভ কোড (Media Query) === */
     @media (max-width: 768px) {
         .product-grid {
-
+            /* মোবাইলে গ্রিড ভাঙবে এবং ১টি করে কার্ড দেখাবে */
             grid-template-columns: repeat(1, 1fr);
         }
     }
@@ -265,84 +281,30 @@
     </section>
     </section>
     <section class="featured-section">
-        <div class="featured-container">
-            <div class="featured-image">
-                <img src="images/gear.png" alt="Featured Gear">
-            </div>
-
-            <div class="featured-content">
-                <h2>Featured products at one place</h2>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor <br> do amet sint. Velit officia
-                    consequat
-                    duis enim velit mollit.<br> Exercitation veniam consequat sunt nostrud amet.</p>
-                <a href="#" class="join-btn">Join Now &rarr;</a>
-            </div>
+    <div class="featured-container">
+        <div class="featured-image">
+            <img src="images/gear.png" alt="Featured Gear">
         </div>
-    </section>
-    <footer class="influencer-footer">
+
+        <div class="featured-content">
+            <h2>Featured products at one place</h2>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <a href="#" class="join-btn">Join Now &rarr;</a>
+        </div>
+    </div>
+</section>
+
+    <footer>
         <h3>Influencer products</h3>
         <p>Copyright © 2026 Saiful Islam <br> All rights reserved</p>
-
-        <div class="footer-social-icons">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <div class="socials">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-dribbble"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
         </div>
     </footer>
-    <style>
-        .influencer-footer {
-            background-color: #0A0826 !important;
-            color: white !important;
-            text-align: center;
-            padding: 80px 0;
-            width: 100vw;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-            box-sizing: border-box;
-        }
 
-        .influencer-footer h3 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .influencer-footer p {
-            font-size: 14px;
-            opacity: 0.8;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .footer-social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .footer-social-icons a {
-            color: white;
-            background: rgba(255, 255, 255, 0.1);
-            width: 42px;
-            height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s ease;
-        }
-
-        .footer-social-icons a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-    </style>
 </body>
 
 </html>
